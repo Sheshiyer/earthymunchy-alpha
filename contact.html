@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Earthy Munchy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                        body: ['"Crimson Text"', 'serif'],
+                    },
+                    colors: {
+                        earth: {
+                            cream: '#F5F1E8',
+                            sage: '#8B9A7E',
+                            darkSage: '#4A5D43',
+                            terracotta: '#D4876F',
+                            clay: '#C17855',
+                            warmBrown: '#8B6F47',
+                            text: '#594a42',
+                            darkText: '#2c2420'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body class="bg-earth-cream text-earth-text font-sans antialiased flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html"
+                    class="text-2xl font-serif font-bold tracking-tight text-earth-darkText flex items-center gap-2">
+                    EARTHY MUNCHY.
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
+                    <a href="product-honey.html" class="hover:text-earth-terracotta transition-colors duration-200">The
+                        Honey Vault</a>
+                    <a href="product-cinnamon.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cinnamon</a>
+                    <a href="product-cloves.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cloves</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <button
+                    class="cart-trigger text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200 relative group">
+                    <i data-lucide="shopping-bag"
+                        class="w-5 h-5 group-hover:text-earth-terracotta transition-colors"></i>
+                    <span
+                        class="cart-badge opacity-0 scale-0 transition-all duration-300 absolute -top-1 -right-1 w-4 h-4 bg-earth-terracotta text-white text-[9px] flex items-center justify-center rounded-full ring-2 ring-earth-cream font-bold"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 text-center bg-earth-sage/10 text-earth-darkText relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('img/hero-contact-apothecary.png')] bg-cover bg-center opacity-20">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h1 class="text-5xl lg:text-7xl font-serif font-light mb-6">Start a Conversation.</h1>
+            <p class="text-xl text-earth-text/80 font-body max-w-2xl mx-auto">
+                Whether you're looking for a bespoke wedding favor, corporate gifting, or just want to say hello.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-24">
+        <div class="max-w-4xl mx-auto px-6">
+
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-earth-warmBrown/10">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-earth-warmBrown uppercase tracking-wide mb-2">Name</label>
+                            <input type="text" name="name"
+                                class="w-full border-b border-earth-warmBrown/20 py-3 focus:outline-none focus:border-earth-terracotta transition-colors bg-transparent">
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold text-earth-warmBrown uppercase tracking-wide mb-2">Email</label>
+                            <input type="email" name="email"
+                                class="w-full border-b border-earth-warmBrown/20 py-3 focus:outline-none focus:border-earth-terracotta transition-colors bg-transparent">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-earth-warmBrown uppercase tracking-wide mb-2">Subject</label>
+                        <select name="subject"
+                            class="w-full border-b border-earth-warmBrown/20 py-3 focus:outline-none focus:border-earth-terracotta transition-colors bg-transparent text-earth-text">
+                            <option>General Enquiry</option>
+                            <option>Corporate Gifting (50+ units)</option>
+                            <option>Wholesale / Retail Partnership</option>
+                            <option>Wedding Favors</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-earth-warmBrown uppercase tracking-wide mb-2">Message</label>
+                        <textarea name="message" rows="5"
+                            class="w-full border-b border-earth-warmBrown/20 py-3 focus:outline-none focus:border-earth-terracotta transition-colors bg-transparent"></textarea>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="w-full py-4 bg-earth-darkText text-earth-cream font-bold uppercase tracking-widest hover:bg-earth-terracotta transition-colors">Send
+                            Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mt-16 text-center text-earth-warmBrown">
+                <p class="mb-2 font-bold uppercase text-xs tracking-widest">Email Us Directly</p>
+                <a href="mailto:hello@earthymunchy.com"
+                    class="text-2xl font-serif text-earth-darkText hover:text-earth-terracotta transition-colors">hello@earthymunchy.com</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-earth-darkText py-12 border-t border-white/5 text-sm text-center text-earth-cream/40">
+        <p>&copy; 2025 EARTHY MUNCHY.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,859 @@
+{
+    "brand": {
+        "name": "Earthy Munchy",
+        "tagline": "From native roots to global hearts",
+        "trademark": "Earthy Munchy™ is a registered trademark of Yamuna Foods (Pvt) Ltd, Sri Lanka used under agency authorization",
+        "established": "2025",
+        "values": [
+            "Exclusive",
+            "Authentic",
+            "Hand-Picked"
+        ],
+        "positioning": "First Sri Lankan brand bringing native products directly to India"
+    },
+    "manufacturer": {
+        "spices": {
+            "name": "Yamuna Foods Pvt Ltd",
+            "address": "No.33,33A, Horton Regency Apartment, Horton Place, Colombo 00070, Sri Lanka",
+            "email": "yamunafoods.p.l@gmail.com"
+        },
+        "honey": {
+            "name": "Bee Global",
+            "address": "Opp Govt Hospital & Govt Middle School, Jalahalli Village, Bettahalsoor, Bengaluru, Karnataka, India - 562157",
+            "fssai": "11225302002326"
+        }
+    },
+    "distributor": {
+        "name": "Mercury Inc.",
+        "address": "22 D Costa Square, St Thomas Town, Bangalore 560084",
+        "phone": "+91 8025470681",
+        "email": "mercury.inc16@gmail.com",
+        "fssai": "11223999000114"
+    },
+    "categories": [
+        {
+            "id": "ceylon-cinnamon",
+            "name": "Ceylon Cinnamon",
+            "description": "True Ceylon Cinnamon (Cinnamomum verum) from Sri Lanka's southwestern highlands",
+            "origin": "Sri Lanka",
+            "botanical_name": "Cinnamomum verum"
+        },
+        {
+            "id": "ceylon-cloves",
+            "name": "Ceylon Cloves",
+            "description": "Hand-picked whole cloves from Sri Lanka's central highlands",
+            "origin": "Sri Lanka",
+            "botanical_name": "Syzygium aromaticum"
+        },
+        {
+            "id": "honey-vault",
+            "name": "The Honey Vault",
+            "description": "Curated collection of single-origin raw honey from diverse Indian landscapes",
+            "origin": "India",
+            "collection_count": 6
+        }
+    ],
+    "products": [
+        {
+            "id": "cinnamon-c5-100g",
+            "sku": "EM-CIN-C5-100",
+            "barcode": "4796032300087",
+            "category": "ceylon-cinnamon",
+            "name": "Ceylon Cinnamon",
+            "grade": "C5",
+            "subtitle": "Premium Grade - Ultra-Thin Quills",
+            "format": "Whole Sticks",
+            "weight": 100,
+            "weight_unit": "grams",
+            "mrp": 589,
+            "currency": "INR",
+            "description": "The spirit of every kitchen lies in its staple ingredients. At Earthy Munchy, we travel to the source to select only the finest ingredients that carry the richness of tradition and purity. Every pack is a promise—unadulterated, carefully chosen, and delivered straight from the farm to your home. From the tender inner bark of the Cinnamomum verum tree, native to Sri Lanka, our C5 grade cinnamon boasts ultra-thin quills, a light golden-brown hue, and a delicate sweet aroma. Naturally low in coumarin, it delivers unmatched purity and flavour. The first Sri Lankan brand to launch in India with native Sri Lankan products, hand-picked at source—bringing you the true taste of Sri Lanka in every quill.",
+            "features": [
+                "Exclusive",
+                "Authentic",
+                "Hand-Picked",
+                "Ultra-thin quills",
+                "Light golden-brown hue",
+                "Delicate sweet aroma",
+                "Naturally low in coumarin",
+                "Unmatched purity and flavour"
+            ],
+            "usage": [
+                "Teas",
+                "Smoothies",
+                "Baking",
+                "Cooking",
+                "Daily wellness"
+            ],
+            "origin": "Sri Lanka",
+            "ingredients": "100% Ceylon Cinnamon.Grade C5",
+            "shelf_life": "12 months from packaging",
+            "storage": "Keep in cool & dark place away from sunlight",
+            "allergen": "It may contain traces of tree nuts & seeds",
+            "certifications": [
+                "FSSAI"
+            ],
+            "packaging": {
+                "type": "Stand-up kraft pouch with resealable zipper",
+                "label_style": "Black background with gold/copper accents",
+                "features": [
+                    "Food-grade",
+                    "Moisture barrier"
+                ]
+            },
+            "batch_info": {
+                "sample_batch": "C50201",
+                "sample_pack_date": "28/11/2025"
+            },
+            "nutrition_facts": {
+                "serving_size": "1 tsp (2.6 g)",
+                "servings_per_container": "~38",
+                "per_serving": {
+                    "calories": 6.4,
+                    "total_fat": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    },
+                    "saturated_fat": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    },
+                    "trans_fat": {
+                        "amount": "0g"
+                    },
+                    "cholesterol": {
+                        "amount": "0mg",
+                        "daily_value": "0%"
+                    },
+                    "sodium": {
+                        "amount": "0.3mg",
+                        "daily_value": "0%"
+                    },
+                    "total_carbohydrate": {
+                        "amount": "2.1g",
+                        "daily_value": "0.7%"
+                    },
+                    "dietary_fiber": {
+                        "amount": "1.4g",
+                        "daily_value": "5.5%"
+                    },
+                    "sugars": {
+                        "amount": "0.1g"
+                    },
+                    "protein": {
+                        "amount": "0.1g",
+                        "daily_value": "0%"
+                    }
+                },
+                "vitamins_minerals": {
+                    "vitamin_a": "0.2%",
+                    "vitamin_c": "0.2%",
+                    "calcium": "2.6%",
+                    "iron": "1.2%",
+                    "vitamin_d": "0.0%",
+                    "vitamin_e": "0.2%",
+                    "vitamin_k": "1.0%",
+                    "thiamin": "0.0%",
+                    "riboflavin": "0.1%",
+                    "niacin": "0.2%",
+                    "vitamin_b6": "0.2%",
+                    "folate": "0.0%",
+                    "vitamin_b12": "0.0%",
+                    "pantothenic_acid": "0.1%",
+                    "phosphorus": "0.2%",
+                    "magnesium": "0.4%",
+                    "zinc": "0.3%",
+                    "selenium": "0.1%",
+                    "copper": "0.4%",
+                    "manganese": "22.7%"
+                },
+                "note": "Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs."
+            },
+            "seo": {
+                "meta_title": "Premium Ceylon Cinnamon C5 Grade - 100g | True Cinnamon | Earthy Munchy",
+                "meta_description": "Ultra-thin Ceylon Cinnamon quills (C5 Grade) from Sri Lanka. Naturally low in coumarin, perfect for teas, baking & daily wellness. Hand-picked authentic quality.",
+                "keywords": [
+                    "ceylon cinnamon",
+                    "true cinnamon",
+                    "c5 grade",
+                    "sri lankan cinnamon",
+                    "premium cinnamon",
+                    "low coumarin",
+                    "ceylon spices"
+                ]
+            },
+            "availability": {
+                "in_stock": true,
+                "channels": [
+                    "Direct",
+                    "Blinkit",
+                    "Swiggy Instamart"
+                ],
+                "shipping": "Plastic-free packaging"
+            }
+        },
+        {
+            "id": "cinnamon-h2-100g",
+            "sku": "EM-CIN-H2-100",
+            "barcode": "4796032300151",
+            "category": "ceylon-cinnamon",
+            "name": "Ceylon Cinnamon",
+            "grade": "H2",
+            "subtitle": "Versatile Everyday Grade",
+            "format": "Whole Sticks",
+            "weight": 100,
+            "weight_unit": "grams",
+            "mrp": 389,
+            "currency": "INR",
+            "description": "The heart of every kitchen lies in its spices, flours, and staples. At Earthy Munchy, we travel to the source to select only the finest ingredients that carry the richness of tradition and purity. Every pack is a promise—unadulterated, carefully chosen, and delivered straight from the farm to your home. Crafted from the inner bark of the Cinnamomum verum tree, native to Sri Lanka, our H2 grade cinnamon features slightly thicker quills. Perfect for daily cooking, it blends beautifully into curries, stews, baked goods, and spiced teas. Being the first Sri Lankan brand to launch in India with native Sri Lankan products, hand-picked at source, H2 brings the warmth of Sri Lanka's kitchens to yours.",
+            "features": [
+                "Versatile",
+                "Wholesome",
+                "Hand-Picked",
+                "Slightly thicker quills",
+                "Perfect for daily cooking",
+                "Excellent value",
+                "Blends beautifully into dishes"
+            ],
+            "usage": [
+                "Curries",
+                "Stews",
+                "Baked goods",
+                "Spiced teas",
+                "Everyday cooking"
+            ],
+            "origin": "Sri Lanka",
+            "ingredients": "100% Ceylon Cinnamon.Grade- H2",
+            "shelf_life": "12 months from packaging",
+            "storage": "Keep in cool & dark place away from sunlight",
+            "allergen": "It may contain traces of tree nuts & seeds",
+            "certifications": [
+                "FSSAI"
+            ],
+            "packaging": {
+                "type": "Stand-up kraft pouch with resealable zipper",
+                "label_style": "White/cream background with botanical line art",
+                "features": [
+                    "Food-grade",
+                    "Clear window panel",
+                    "Moisture barrier"
+                ]
+            },
+            "batch_info": {
+                "sample_batch": "H20201",
+                "sample_pack_date": "28/11/2025"
+            },
+            "nutrition_facts": {
+                "serving_size": "1 tsp (2.6 g)",
+                "servings_per_container": "~38",
+                "per_serving": {
+                    "calories": 6.4,
+                    "total_fat": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    },
+                    "saturated_fat": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    },
+                    "trans_fat": {
+                        "amount": "0g"
+                    },
+                    "cholesterol": {
+                        "amount": "0mg",
+                        "daily_value": "0%"
+                    },
+                    "sodium": {
+                        "amount": "0.3mg",
+                        "daily_value": "0%"
+                    },
+                    "total_carbohydrate": {
+                        "amount": "2.1g",
+                        "daily_value": "0.7%"
+                    },
+                    "dietary_fiber": {
+                        "amount": "1.4g",
+                        "daily_value": "5.5%"
+                    },
+                    "sugars": {
+                        "amount": "0.1g"
+                    },
+                    "protein": {
+                        "amount": "0.1g",
+                        "daily_value": "0%"
+                    }
+                },
+                "vitamins_minerals": {
+                    "vitamin_a": "0.2%",
+                    "vitamin_c": "0.2%",
+                    "calcium": "2.6%",
+                    "iron": "1.2%",
+                    "manganese": "22.7%"
+                },
+                "note": "Percent Daily Values are based on a 2,000 calorie diet."
+            },
+            "seo": {
+                "meta_title": "Ceylon Cinnamon H2 Grade - 100g | Everyday Cooking | Earthy Munchy",
+                "meta_description": "Authentic Ceylon Cinnamon H2 Grade for daily cooking. Perfect for curries, stews & baking. Hand-picked from Sri Lanka. Excellent quality & value.",
+                "keywords": [
+                    "ceylon cinnamon h2",
+                    "cooking cinnamon",
+                    "everyday cinnamon",
+                    "sri lankan spices",
+                    "true cinnamon sticks"
+                ]
+            },
+            "availability": {
+                "in_stock": true,
+                "channels": [
+                    "Direct",
+                    "Blinkit",
+                    "Swiggy Instamart"
+                ],
+                "shipping": "Plastic-free packaging"
+            }
+        },
+        {
+            "id": "cinnamon-powder-100g",
+            "sku": "EM-CIN-PWD-100",
+            "barcode": "4796032300087",
+            "category": "ceylon-cinnamon",
+            "name": "Ceylon Cinnamon Powder",
+            "grade": "C5 (Powder)",
+            "subtitle": "Finely Milled from C5 Grade Quills",
+            "format": "Powder",
+            "weight": 100,
+            "weight_unit": "grams",
+            "mrp": 589,
+            "currency": "INR",
+            "description": "The spirit of every kitchen lies in its staple ingredients. At Earthy Munchy, we travel to the source to select only the finest ingredients that carry the richness of tradition and purity. Every pack is a promise—unadulterated, carefully chosen, and delivered straight from the farm to your home. Our Ceylon Cinnamon Powder is crafted from the finest hand-selected quills grown in Sri Lanka, finely milled to preserve its natural sweetness and delicate aroma. Known as 'True Cinnamon,' it offers a warm, gentle flavor and is rich in antioxidants, making it ideal for daily wellness. Perfect for teas, smoothies, baking, and cooking.",
+            "features": [
+                "Exclusive",
+                "Authentic",
+                "Hand-Picked",
+                "Finely milled from C5 quills",
+                "Rich in antioxidants",
+                "True Cinnamon",
+                "Warm, gentle flavor",
+                "Ideal for daily wellness"
+            ],
+            "usage": [
+                "Teas",
+                "Smoothies",
+                "Baking",
+                "Cooking",
+                "Daily wellness",
+                "Golden milk",
+                "Oatmeal"
+            ],
+            "origin": "Sri Lanka",
+            "ingredients": "100% Ceylon Cinnamon.Grade C5",
+            "shelf_life": "12 months from packaging",
+            "storage": "Keep in cool & dark place away from sunlight",
+            "allergen": "It may contain traces of tree nuts & seeds",
+            "certifications": [
+                "FSSAI"
+            ],
+            "packaging": {
+                "type": "Stand-up kraft pouch with resealable zipper",
+                "label_style": "Brown/black background with gold accents",
+                "features": [
+                    "Food-grade",
+                    "Moisture barrier",
+                    "Airtight seal"
+                ]
+            },
+            "batch_info": {
+                "sample_batch": "C50201",
+                "sample_pack_date": "28/11/2025"
+            },
+            "nutrition_facts": {
+                "serving_size": "1 tsp (2.6 g)",
+                "servings_per_container": "~38",
+                "per_serving": {
+                    "calories": 6.4,
+                    "total_fat": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    },
+                    "saturated_fat": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    },
+                    "trans_fat": {
+                        "amount": "0g"
+                    },
+                    "cholesterol": {
+                        "amount": "0mg",
+                        "daily_value": "0%"
+                    },
+                    "sodium": {
+                        "amount": "0.3mg",
+                        "daily_value": "0%"
+                    },
+                    "total_carbohydrate": {
+                        "amount": "2.1g",
+                        "daily_value": "0.7%"
+                    },
+                    "dietary_fiber": {
+                        "amount": "1.4g",
+                        "daily_value": "5.5%"
+                    },
+                    "sugars": {
+                        "amount": "0.1g"
+                    },
+                    "protein": {
+                        "amount": "0.1g",
+                        "daily_value": "0%"
+                    }
+                },
+                "vitamins_minerals": {
+                    "calcium": "2.6%",
+                    "iron": "1.2%",
+                    "manganese": "22.7%"
+                },
+                "note": "Percent Daily Values are based on a 2,000 calorie diet."
+            },
+            "seo": {
+                "meta_title": "Ceylon Cinnamon Powder - 100g | C5 Grade | True Cinnamon | Earthy Munchy",
+                "meta_description": "Pure Ceylon Cinnamon Powder milled from C5 grade quills. Rich in antioxidants, perfect for teas, smoothies & wellness. Hand-picked from Sri Lanka.",
+                "keywords": [
+                    "cinnamon powder",
+                    "ceylon cinnamon powder",
+                    "true cinnamon powder",
+                    "wellness spice",
+                    "low coumarin cinnamon"
+                ]
+            },
+            "availability": {
+                "in_stock": true,
+                "channels": [
+                    "Direct",
+                    "Blinkit",
+                    "Swiggy Instamart"
+                ],
+                "shipping": "Plastic-free packaging"
+            }
+        },
+        {
+            "id": "cloves-grade1-50g",
+            "sku": "EM-CLV-G1-50",
+            "barcode": "4796032300053",
+            "category": "ceylon-cloves",
+            "name": "True Ceylon Cloves",
+            "grade": "Grade 1",
+            "subtitle": "Hand Picked Whole Cloves",
+            "format": "Whole Cloves",
+            "weight": 50,
+            "weight_unit": "grams",
+            "mrp": 239,
+            "currency": "INR",
+            "description": "The heart of every kitchen lies in its spices, flours, and staples. At Earthy Munchy, we travel to the source to select only the finest ingredients that carry the richness of tradition and purity. Every pack is a promise—unadulterated, carefully chosen, and delivered straight from the farm to your home. From Sri Lanka's fertile highlands come the world's finest Grade 1 Ceylon cloves. Hand-selected at peak maturity and delicately cured, they deliver bold aroma, refined flavor, and natural richness—a true jewel of the Spice Island.",
+            "features": [
+                "Premium Grade 1",
+                "Hand-picked",
+                "Peak maturity harvest",
+                "Bold aroma",
+                "Refined flavor",
+                "Natural richness",
+                "Whole cloves",
+                "True jewel of the Spice Island"
+            ],
+            "usage": [
+                "Curries",
+                "Biryanis",
+                "Chai",
+                "Baking",
+                "Pickles",
+                "Mulled wine",
+                "Whole spice blends",
+                "Garam masala"
+            ],
+            "origin": "Sri Lanka",
+            "ingredients": "100% Sun dried Ceylon Cloves",
+            "shelf_life": "12 months from packaging",
+            "storage": "Keep in cool & dark place away from sunlight",
+            "allergen": "It may contain traces of tree nuts & seeds",
+            "certifications": [
+                "FSSAI"
+            ],
+            "packaging": {
+                "type": "Stand-up kraft pouch with resealable zipper",
+                "label_style": "White/cream background with botanical illustration",
+                "features": [
+                    "Food-grade",
+                    "Clear window panel",
+                    "Moisture barrier"
+                ]
+            },
+            "batch_info": {
+                "sample_batch": "CL0201",
+                "sample_pack_date": "28/11/2025"
+            },
+            "nutrition_facts": {
+                "serving_size": "50 g",
+                "servings_per_container": "1",
+                "per_serving": {
+                    "calories": 214,
+                    "total_fat": {
+                        "amount": "10g",
+                        "daily_value": "13%"
+                    },
+                    "saturated_fat": {
+                        "amount": "1g",
+                        "daily_value": "5%"
+                    },
+                    "trans_fat": {
+                        "amount": "0g"
+                    },
+                    "cholesterol": {
+                        "amount": "0mg",
+                        "daily_value": "0%"
+                    },
+                    "sodium": {
+                        "amount": "125mg",
+                        "daily_value": "5%"
+                    },
+                    "total_carbohydrate": {
+                        "amount": "25.5g",
+                        "daily_value": "9%"
+                    },
+                    "dietary_fiber": {
+                        "amount": "4.7g",
+                        "daily_value": "17%"
+                    },
+                    "total_sugars": {
+                        "amount": "Negligible"
+                    },
+                    "protein": {
+                        "amount": "3g",
+                        "daily_value": "6%"
+                    }
+                },
+                "vitamins_minerals": {
+                    "calcium": {
+                        "amount": "325mg",
+                        "daily_value": "25%"
+                    },
+                    "iron": {
+                        "amount": "4.3mg",
+                        "daily_value": "24%"
+                    },
+                    "vitamin_c": {
+                        "amount": "40mg",
+                        "daily_value": "45%"
+                    }
+                },
+                "note": "Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs."
+            },
+            "seo": {
+                "meta_title": "Premium Ceylon Cloves Grade 1 - 50g | Whole Cloves | Earthy Munchy",
+                "meta_description": "Hand-picked Grade 1 Ceylon Cloves from Sri Lanka. Bold aroma, refined flavor, peak maturity. Perfect for cooking, chai & baking.",
+                "keywords": [
+                    "ceylon cloves",
+                    "grade 1 cloves",
+                    "whole cloves",
+                    "sri lankan cloves",
+                    "premium cloves",
+                    "true ceylon cloves"
+                ]
+            },
+            "availability": {
+                "in_stock": true,
+                "channels": [
+                    "Direct",
+                    "Blinkit",
+                    "Swiggy Instamart"
+                ],
+                "shipping": "Plastic-free packaging"
+            }
+        },
+        {
+            "id": "cloves-cg2-50g",
+            "sku": "EM-CLV-CG2-50",
+            "barcode": "4796032300046",
+            "category": "ceylon-cloves",
+            "name": "True Ceylon Cloves",
+            "grade": "Grade CG2",
+            "subtitle": "Excellent Value Whole Cloves",
+            "format": "Whole Cloves",
+            "weight": 50,
+            "weight_unit": "grams",
+            "mrp": 189,
+            "currency": "INR",
+            "description": "The heart of every kitchen lies in its spices, flours, and staples. At Earthy Munchy, we travel to the source to select only the finest ingredients that carry the richness of tradition and purity. Every pack is a promise—unadulterated, carefully chosen, and delivered straight from the farm to your home. From the fertile highlands of Sri Lanka come Grade 2 Ceylon cloves, harvested at peak maturity and traditionally cured. Known for their warm aroma, balanced flavor, and natural richness, they embody the authentic spirit of the Spice Island at excellent value.",
+            "features": [
+                "Excellent value",
+                "Grade CG2",
+                "Traditionally cured",
+                "Warm aroma",
+                "Balanced flavor",
+                "Natural richness",
+                "Peak maturity harvest",
+                "Authentic spirit of the Spice Island"
+            ],
+            "usage": [
+                "Curries",
+                "Biryanis",
+                "Chai",
+                "Everyday cooking",
+                "Spice blends",
+                "Pickles",
+                "Stews"
+            ],
+            "origin": "Sri Lanka",
+            "ingredients": "100% Sun dried Ceylon Cloves",
+            "shelf_life": "12 months from packaging",
+            "storage": "Keep in cool & dark place away from sunlight",
+            "allergen": "It may contain traces of tree nuts & seeds",
+            "certifications": [
+                "FSSAI"
+            ],
+            "packaging": {
+                "type": "Stand-up kraft pouch with resealable zipper",
+                "label_style": "White/cream background with botanical illustration",
+                "features": [
+                    "Food-grade",
+                    "Clear window panel",
+                    "Moisture barrier"
+                ]
+            },
+            "batch_info": {
+                "sample_batch": "CL0201",
+                "sample_pack_date": "28/11/2025"
+            },
+            "nutrition_facts": {
+                "serving_size": "50 g",
+                "servings_per_container": "1",
+                "per_serving": {
+                    "calories": 214,
+                    "total_fat": {
+                        "amount": "10g",
+                        "daily_value": "13%"
+                    },
+                    "saturated_fat": {
+                        "amount": "1g",
+                        "daily_value": "5%"
+                    },
+                    "trans_fat": {
+                        "amount": "0g"
+                    },
+                    "cholesterol": {
+                        "amount": "0mg",
+                        "daily_value": "0%"
+                    },
+                    "sodium": {
+                        "amount": "125mg",
+                        "daily_value": "5%"
+                    },
+                    "total_carbohydrate": {
+                        "amount": "25.5g",
+                        "daily_value": "9%"
+                    },
+                    "dietary_fiber": {
+                        "amount": "4.7g",
+                        "daily_value": "17%"
+                    },
+                    "total_sugars": {
+                        "amount": "Negligible"
+                    },
+                    "protein": {
+                        "amount": "3g",
+                        "daily_value": "6%"
+                    }
+                },
+                "vitamins_minerals": {
+                    "calcium": {
+                        "amount": "325mg",
+                        "daily_value": "25%"
+                    },
+                    "iron": {
+                        "amount": "4.3mg",
+                        "daily_value": "24%"
+                    },
+                    "vitamin_c": {
+                        "amount": "40mg",
+                        "daily_value": "45%"
+                    }
+                },
+                "note": "Percent Daily Values are based on a 2,000 calorie diet."
+            },
+            "seo": {
+                "meta_title": "Ceylon Cloves Grade CG2 - 50g | Best Value Whole Cloves | Earthy Munchy",
+                "meta_description": "Grade CG2 Ceylon Cloves from Sri Lanka. Warm aroma, balanced flavor, excellent value. Perfect for daily cooking & authentic taste.",
+                "keywords": [
+                    "ceylon cloves cg2",
+                    "grade 2 cloves",
+                    "everyday cloves",
+                    "value cloves",
+                    "whole ceylon cloves"
+                ]
+            },
+            "availability": {
+                "in_stock": true,
+                "channels": [
+                    "Direct",
+                    "Blinkit",
+                    "Swiggy Instamart"
+                ],
+                "shipping": "Plastic-free packaging"
+            }
+        },
+        {
+            "id": "honey-vault-set",
+            "sku": "EM-HNY-VLT-300",
+            "barcode": "4796032300008",
+            "category": "honey-vault",
+            "name": "The Honey Vault",
+            "subtitle": "A Curated Journey Through Nature's Sweetest Origins",
+            "format": "Gift Set Collection",
+            "weight": 300,
+            "weight_unit": "grams",
+            "jar_size": "6 × 50ml",
+            "mrp": 999,
+            "currency": "INR",
+            "description": "There are thousands of wild blossoms across India—each kissed by the sun, each visited by bees that turn their nectar into gold. At Earthy Munchy, we partner with ethical beekeepers who work in harmony with nature to craft pure, unblended honey from diverse floral landscapes. Every jar in The Honey Vault tells the story of its origin—from the herbal hillsides of Tulsi blooms to the lush Lychee orchards and the deep, mystical forests of the Western Ghats and Sundarbans. Each variety of honey embodies the land it comes from—its aroma, its color, and its spirit. Discover how nature speaks in many tongues of sweetness—six honeys, six worlds, one vault.",
+            "collection": [
+                {
+                    "name": "Tulsi Honey",
+                    "description": "Calming, herbal nectar from sacred basil blooms",
+                    "character": "Herbal, calming, medicinal notes",
+                    "origin_region": "Temple gardens across India",
+                    "color": "Light amber"
+                },
+                {
+                    "name": "Lychee Honey",
+                    "description": "Fruity and floral sweetness from lush lychee orchards",
+                    "character": "Fruity, floral, tropical notes",
+                    "origin_region": "Muzaffarpur orchards, Bihar",
+                    "color": "Golden amber"
+                },
+                {
+                    "name": "Moringa Honey",
+                    "description": "Nutty and smooth, drawn from the 'miracle tree'",
+                    "character": "Nutty, smooth, earthy undertones",
+                    "origin_region": "Rajasthan",
+                    "color": "Light golden"
+                },
+                {
+                    "name": "Red Forest Honey",
+                    "description": "Bold, smoky tones from tropical forest blossoms",
+                    "character": "Bold, smoky, complex depth",
+                    "origin_region": "Western Ghats forests",
+                    "color": "Deep amber to reddish"
+                },
+                {
+                    "name": "Black Forest Honey",
+                    "description": "Deep, malty notes from highland evergreens",
+                    "character": "Deep, malty, robust flavor",
+                    "origin_region": "Himalayan foothills",
+                    "color": "Dark amber"
+                },
+                {
+                    "name": "Sundarban Wild Flora Honey",
+                    "description": "Exotic, saline-sweet nectar from mangrove blossoms",
+                    "character": "Exotic, saline-sweet, unique complexity",
+                    "origin_region": "Sundarbans mangrove forests, West Bengal",
+                    "color": "Medium amber"
+                }
+            ],
+            "features": [
+                "100% Pure & Natural",
+                "Unheated",
+                "Unblended",
+                "Unfiltered",
+                "Ethically sourced from tribal and rural beekeepers",
+                "Raw honey",
+                "No additives",
+                "Single-origin varietals",
+                "Gift-ready presentation"
+            ],
+            "origin": "India (Multiple regions)",
+            "ingredients": "Pure raw honey from specific floral sources (varies by variety)",
+            "shelf_life": "18 months from packaging",
+            "storage": "Store at room temperature. Natural crystallization may occur and is a sign of purity.",
+            "certifications": [
+                "FSSAI"
+            ],
+            "packaging": {
+                "type": "Premium black gift box with gold accents",
+                "contents": "6 glass jars (50ml each) with sealed lids",
+                "features": [
+                    "Gift-ready",
+                    "Sustainable materials",
+                    "Protective cushioning"
+                ],
+                "dimensions": "Approx. 25cm × 15cm × 8cm"
+            },
+            "batch_info": {
+                "sample_batch": "BGH-SHBF-0925",
+                "sample_pack_date": "14-DEC-2025"
+            },
+            "nutrition_facts": {
+                "serving_size": "1 Tbsp (21g)",
+                "servings_per_jar": "~2 per 50ml jar",
+                "per_serving": {
+                    "calories": 64,
+                    "total_fat": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    },
+                    "sodium": {
+                        "amount": "0mg",
+                        "daily_value": "0%"
+                    },
+                    "total_carbohydrate": {
+                        "amount": "17g",
+                        "daily_value": "6%"
+                    },
+                    "sugars": {
+                        "amount": "16g"
+                    },
+                    "protein": {
+                        "amount": "0g",
+                        "daily_value": "0%"
+                    }
+                },
+                "note": "Nutritional values may vary slightly by honey variety."
+            },
+            "processed_by": {
+                "name": "Bee Global",
+                "location": "Bengaluru, Karnataka, India",
+                "fssai": "11225302002326",
+                "note": "Works with ethical beekeepers across multiple Indian states"
+            },
+            "seo": {
+                "meta_title": "The Honey Vault - 6 Rare Indian Honeys Gift Set | Raw & Unblended | Earthy Munchy",
+                "meta_description": "Curated collection of 6 single-origin raw honeys from across India. Tulsi, Lychee, Moringa, Red Forest, Black Forest & Sundarban varieties. Premium gift set. ₹999",
+                "keywords": [
+                    "honey gift set",
+                    "raw honey",
+                    "single origin honey",
+                    "indian honey collection",
+                    "honey vault",
+                    "premium honey",
+                    "unblended honey",
+                    "artisan honey"
+                ]
+            },
+            "availability": {
+                "in_stock": true,
+                "channels": [
+                    "Direct",
+                    "Blinkit",
+                    "Swiggy Instamart"
+                ],
+                "shipping": "Plastic-free packaging",
+                "gift_wrapping": "Included"
+            }
+        }
+    ],
+    "metadata": {
+        "version": "1.1",
+        "last_updated": "2025-12-16",
+        "verified": "Visual inspection complete",
+        "total_products": 6,
+        "total_categories": 3,
+        "data_source": "Actual product packaging analysis"
+    }
+}

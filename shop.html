@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collection | Earthy Munchy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                        body: ['"Crimson Text"', 'serif'],
+                    },
+                    colors: {
+                        earth: {
+                            cream: '#F5F1E8',
+                            sage: '#8B9A7E',
+                            darkSage: '#4A5D43',
+                            terracotta: '#D4876F',
+                            clay: '#C17855',
+                            warmBrown: '#8B6F47',
+                            text: '#594a42',
+                            darkText: '#2c2420'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body class="bg-earth-cream text-earth-text font-sans antialiased">
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html"
+                    class="text-2xl font-serif font-bold tracking-tight text-earth-darkText flex items-center gap-2">
+                    EARTHY MUNCHY.
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
+                    <a href="shop-honey.html" class="hover:text-earth-terracotta transition-colors duration-200">The
+                        Honey Vault</a>
+                    <a href="shop-spices.html" class="hover:text-earth-terracotta transition-colors duration-200">Ceylon
+                        Spices</a>
+                    <a href="shop-sampler.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Gifting</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="story.html" class="text-sm font-normal text-earth-warmBrown hover:text-earth-terracotta">Our
+                    Story</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-40 pb-20 text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <span class="text-earth-terracotta font-bold uppercase tracking-widest text-xs mb-4 block">The
+                Collection</span>
+            <h1 class="text-5xl lg:text-7xl font-serif font-light text-earth-darkText mb-6">Curated Essentials.</h1>
+            <p class="text-xl text-earth-text/80 font-body italic">
+                From the wild hives of the Sundarbans to the spice groves of Colombo.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Honey -->
+            <a href="shop-honey.html" class="group block">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-6">
+                    <div
+                        class="absolute inset-0 bg-earth-darkText transition-transform duration-700 group-hover:scale-105">
+                        <img src="img/honey-hero-amber.png"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-white text-3xl font-serif z-10">The Honey Vault</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-earth-sage">6 Varietals</span>
+                    <p class="text-earth-warmBrown mt-2">Wild, Unfiltered, Single Origin.</p>
+                </div>
+            </a>
+
+            <!-- Spices -->
+            <a href="shop-spices.html" class="group block">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-6">
+                    <div
+                        class="absolute inset-0 bg-earth-warmBrown transition-transform duration-700 group-hover:scale-105">
+                        <img src="img/spice-spoon-hero.png"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-white text-3xl font-serif z-10">Ceylon Spices</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-earth-terracotta">Native Sri
+                        Lankan</span>
+                    <p class="text-earth-warmBrown mt-2">True Cinnamon (C5) & Cloves.</p>
+                </div>
+            </a>
+
+            <!-- Gifting -->
+            <a href="shop-sampler.html" class="group block">
+                <div class="relative aspect-square overflow-hidden rounded-2xl mb-6">
+                    <div class="absolute inset-0 bg-earth-sage transition-transform duration-700 group-hover:scale-105">
+                        <img src="img/gift-box-honeypack.jpg"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-white text-3xl font-serif z-10">Gifting Sets</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-earth-darkText">Curated Boxes</span>
+                    <p class="text-earth-warmBrown mt-2">For weddings and connoisseurs.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="bg-earth-darkText py-12 border-t border-white/5 text-sm mt-12 text-center text-earth-cream/40">
+        <p>&copy; 2025 EARTHY MUNCHY.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+    </script>
+</body>
+
+</html>

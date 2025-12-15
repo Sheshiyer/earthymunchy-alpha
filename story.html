@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Sourcing Story | Earthy Munchy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                        body: ['"Crimson Text"', 'serif'],
+                    },
+                    colors: {
+                        earth: {
+                            cream: '#F5F1E8',
+                            sage: '#8B9A7E',
+                            darkSage: '#4A5D43',
+                            terracotta: '#D4876F',
+                            clay: '#C17855',
+                            warmBrown: '#8B6F47',
+                            text: '#594a42',
+                            darkText: '#2c2420'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        body {
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-earth-cream text-earth-text font-sans antialiased relative">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html"
+                    class="text-2xl font-serif font-bold tracking-tight text-earth-darkText flex items-center gap-2">
+                    EARTHY MUNCHY.
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
+                    <a href="product-honey.html" class="hover:text-earth-terracotta transition-colors duration-200">The
+                        Honey Vault</a>
+                    <a href="product-cinnamon.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cinnamon</a>
+                    <a href="product-cloves.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cloves</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <button
+                    class="cart-trigger text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200 relative group">
+                    <i data-lucide="shopping-bag"
+                        class="w-5 h-5 group-hover:text-earth-terracotta transition-colors"></i>
+                    <span
+                        class="cart-badge opacity-0 scale-0 transition-all duration-300 absolute -top-1 -right-1 w-4 h-4 bg-earth-terracotta text-white text-[9px] flex items-center justify-center rounded-full ring-2 ring-earth-cream font-bold"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Story Hero -->
+    <header class="relative pt-40 pb-32 overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('img/story-hero-terroir.png')] bg-cover bg-center opacity-40 mix-blend-multiply">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-earth-cream via-earth-cream/60 to-earth-cream"></div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <span class="text-earth-terracotta font-serif italic text-xl mb-4 block animate-fade-in-up">The
+                Origin</span>
+            <h1
+                class="text-6xl lg:text-8xl font-serif font-light text-earth-darkText tracking-tight mb-8 leading-[1.1]">
+                Roots. Soil. <br> <span class="italic text-earth-sage">And a Promise.</span>
+            </h1>
+            <p class="text-xl text-earth-darkText/80 font-body leading-relaxed max-w-2xl mx-auto">
+                "We don't just source ingredients. We preserve a way of life."
+            </p>
+        </div>
+    </header>
+
+    <!-- Section: Founder Story -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+            <!-- Text Content -->
+            <div class="md:col-span-6 order-2 md:order-1 relative z-10">
+                <span class="text-earth-warmBrown font-bold uppercase tracking-widest text-xs mb-4 block">The Founder's
+                    Journey</span>
+                <h2 class="text-4xl lg:text-5xl font-serif text-earth-darkText mb-8">One backpack. <br>Fifty farms.</h2>
+                <div class="prose prose-lg text-earth-text/80 font-body leading-relaxed">
+                    <p class="mb-6">
+                        It started with a simple question: <em>Where does my food actually come from?</em>
+                    </p>
+                    <p class="mb-6">
+                        I spent six months traveling through the hill country of Sri Lanka and the forests of India. Not
+                        staying in hotels, but in the homes of farmers.
+                        I learned that real cinnamon isn't just bark—it's a craft perfected over centuries by families
+                        initiated into the art.
+                    </p>
+                    <p>
+                        Earthy Munchy isn't a corporation. It's a bridge. A direct line from the hands that harvest to
+                        the hands that cook.
+                    </p>
+                    <div class="mt-8 h-20 w-48 overflow-hidden relative">
+                        <img src="img/signature.png" alt="Founder Signature"
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-none opacity-80 mix-blend-multiply">
+                        <!-- Placeholder for signature -->
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-widest mt-0 text-earth-warmBrown">Yamuna, Founder
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Founder Image -->
+            <div class="md:col-span-5 md:col-start-8 order-1 md:order-2 relative">
+                <div class="relative aspect-[4/5] rounded-none overflow-hidden group">
+                    <!-- Image Placeholder -->
+                    <div class="absolute inset-0 bg-earth-sage/10 mix-blend-multiply z-10"></div>
+                    <!-- Replaced actual image with placeholder div or use existing if applicable, using generic for now -->
+                    <img src="img/story-hero-terroir.png" alt="Hands sifting the unique soil of Ratnapura"
+                        class="object-cover w-full h-full grayscale-[10%] hover:grayscale-0 transition-all duration-700">
+
+                    <div class="absolute -bottom-6 -left-6 bg-earth-cream p-6 shadow-xl max-w-xs z-20 hidden md:block">
+                        <p class="font-serif italic text-earth-darkText text-lg">"The soil in Ratnapura smells like
+                            nothing else on earth."</p>
+                    </div>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 border border-earth-terracotta/20 rounded-full z-0">
+                </div>
+                <div
+                    class="absolute bottom-10 -left-10 w-full h-full border border-earth-darkText/5 -z-10 translate-x-4 translate-y-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Sourcing Map / Visual Narrative -->
+    <section class="py-32 bg-earth-darkText text-earth-cream relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-earth-sage font-bold uppercase tracking-widest text-xs mb-4 block">Our
+                    Footprint</span>
+                <h2 class="text-4xl lg:text-5xl font-serif">Two Lands. One Standard.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                <!-- Sri Lanka -->
+                <div class="relative group">
+                    <div class="aspect-video overflow-hidden mb-8 relative">
+                        <img src="img/story-sourcing-blade.png"
+                            class="object-cover w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="border-l border-earth-terracotta/50 pl-6">
+                        <h3 class="text-3xl font-serif mb-2 text-earth-terracotta">Sri Lanka</h3>
+                        <p class="text-earth-cream/60 font-body text-lg mb-4">The Cinnamon & Clove Highlands</p>
+                        <p class="text-sm text-earth-cream/40 leading-relaxed max-w-sm">
+                            Home to the true Cinnamomum verum. Sourced from small-holder farms in the wet zone, where
+                            humidity and soil acidity create the world's most delicate spice.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- India -->
+                <div class="relative group mt-12 md:mt-0">
+                    <div class="aspect-video overflow-hidden mb-8 relative">
+                        <img src="img/story-sourcing-wild-honey.png"
+                            class="object-cover w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="border-l border-earth-sage/50 pl-6">
+                        <h3 class="text-3xl font-serif mb-2 text-earth-sage">India</h3>
+                        <p class="text-earth-cream/60 font-body text-lg mb-4">The Wild Honey Forests</p>
+                        <p class="text-sm text-earth-cream/40 leading-relaxed max-w-sm">
+                            From the Sundarbans to the lush Western Ghats. We work with tribal foragers who harvest wild
+                            honey without disturbing the bee colonies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW Section: Coming Soon Marquee -->
+    <section
+        class="py-16 bg-[url('img/story-marquee-library.png')] bg-cover bg-center border-y border-earth-warmBrown/10 overflow-hidden relative">
+        <div class="absolute inset-0 bg-earth-cream/90"></div> <!-- Overlay for readability -->
+        <p class="text-center text-earth-terracotta text-xs uppercase tracking-widest font-bold mb-8 relative z-10">
+            Coming Soon To
+            Your Favorite Apps</p>
+
+        <div class="marquee-container relative w-full overflow-hidden z-10">
+            <div
+                class="animate-marquee whitespace-nowrap flex items-center gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Replicated content for seamless loop -->
+                <span class="text-4xl font-bold font-serif text-earth-darkText">AMAZON</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">BLINKIT</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">SWIGGY INSTAMART</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">ZEPTO</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">BIGBASKET</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <!-- Repeat -->
+                <span class="text-4xl font-bold font-serif text-earth-darkText">AMAZON</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">BLINKIT</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">SWIGGY INSTAMART</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">ZEPTO</span>
+                <span class="text-xl text-earth-warmBrown/40">•</span>
+                <span class="text-4xl font-bold font-serif text-earth-darkText">BIGBASKET</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW Section: Social Proof / Testimonials (Masonry/Scattered) -->
+    <section class="py-32 bg-[url('img/story-social-kitchen.png')] bg-cover bg-fixed relative">
+        <div class="absolute inset-0 bg-earth-cream/90 backdrop-blur-sm"></div>
+        <!-- Strong overlay as it's a background -->
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-serif text-earth-darkText">"Finally, a spice brand<br>that respects
+                    the source."</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/50 backdrop-blur p-8 shadow-sm border border-white/40 md:translate-y-12">
+                    <div class="flex text-earth-terracotta mb-4 gap-1">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                            data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="font-serif italic text-xl text-earth-darkText mb-6">"I grew up in Kerala and know my
+                        spices. This cinnamon brings me back home. It's delicate, sweet, and absolutely authentic."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-earth-sage/20 rounded-full flex items-center justify-center text-earth-sage font-bold text-xs">
+                            AK</div>
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-earth-darkText">Anjali K.</p>
+                            <p class="text-xs text-earth-text/60">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/50 backdrop-blur p-8 shadow-sm border border-white/40">
+                    <div class="flex text-earth-terracotta mb-4 gap-1">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                            data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="font-serif italic text-xl text-earth-darkText mb-6">"The honey vault is a revelation.
+                        Tasting the difference between Tulsi and Lychee honey was an experience in itself."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-earth-terracotta/20 rounded-full flex items-center justify-center text-earth-terracotta font-bold text-xs">
+                            RS</div>
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-earth-darkText">Rahul S.</p>
+                            <p class="text-xs text-earth-text/60">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white/50 backdrop-blur p-8 shadow-sm border border-white/40 md:translate-y-8">
+                    <div class="flex text-earth-terracotta mb-4 gap-1">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                            data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="font-serif italic text-xl text-earth-darkText mb-6">"Packaging is plastic-free and
+                        beautiful. But the quality of the C5 cinnamon is the real star. Worth every penny."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-earth-warmBrown/20 rounded-full flex items-center justify-center text-earth-warmBrown font-bold text-xs">
+                            MP</div>
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-widest text-earth-darkText">Meera P.</p>
+                            <p class="text-xs text-earth-text/60">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-earth-darkText text-center px-6">
+        <h2 class="text-4xl lg:text-6xl font-serif text-earth-cream mb-8">Taste the Difference.</h2>
+        <p class="text-earth-cream/60 max-w-xl mx-auto mb-12 text-lg">
+            Join thousands of others who have switched to single-origin, ethically sourced spices and honey.
+        </p>
+        <a href="index.html#products"
+            class="inline-flex items-center gap-3 px-10 py-4 bg-earth-terracotta text-white rounded-full font-bold tracking-widest hover:bg-earth-clay transition-all hover:scale-105">
+            Explorer The Shop <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+    </section>
+
+    <footer class="bg-earth-darkText py-12 border-t border-white/5 text-sm mt-0 text-center text-earth-cream/40">
+        <p>&copy; 2025 EARTHY MUNCHY.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+        // Simple GSAP animations for entry
+        gsap.from("header h1", { opacity: 0, y: 30, duration: 1.5, ease: "power3.out", delay: 0.2 });
+        gsap.from("header p", { opacity: 0, y: 20, duration: 1.5, ease: "power3.out", delay: 0.4 });
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

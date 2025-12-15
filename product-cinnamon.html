@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceylon Cinnamon Studio | Earthy Munchy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                        body: ['"Crimson Text"', 'serif'],
+                    },
+                    colors: {
+                        earth: {
+                            cream: '#F5F1E8',
+                            sage: '#8B9A7E',
+                            darkSage: '#4A5D43',
+                            terracotta: '#D4876F',
+                            clay: '#C17855',
+                            warmBrown: '#8B6F47',
+                            text: '#594a42',
+                            darkText: '#2c2420'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .variant-active {
+            border-color: #D4876F !important;
+            opacity: 1 !important;
+        }
+
+        .cinnamon-texture-text {
+            background: url('img/cinnamon-grade-c5-front.jpg');
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-earth-darkText text-earth-cream font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html"
+                    class="text-2xl font-serif font-bold tracking-tight text-earth-darkText flex items-center gap-2">
+                    EARTHY MUNCHY.
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
+                    <a href="product-honey.html" class="hover:text-earth-terracotta transition-colors duration-200">The
+                        Honey Vault</a>
+                    <a href="product-cinnamon.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cinnamon</a>
+                    <a href="product-cloves.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cloves</a>
+                    <a href="story.html" class="hover:text-earth-terracotta transition-colors duration-200">Our
+                        Story</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <button
+                    class="cart-trigger text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200 relative group">
+                    <i data-lucide="shopping-bag"
+                        class="w-5 h-5 group-hover:text-earth-terracotta transition-colors"></i>
+                    <span
+                        class="cart-badge opacity-0 scale-0 transition-all duration-300 absolute -top-1 -right-1 w-4 h-4 bg-earth-terracotta text-white text-[9px] flex items-center justify-center rounded-full ring-2 ring-earth-cream font-bold"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Product Canvas -->
+    <main class="min-h-screen relative flex flex-col md:flex-row">
+
+        <!-- Left: Visual Canvas (Sticky) -->
+        <div class="w-full md:w-1/2 h-[50vh] md:h-screen sticky top-0 bg-earth-warmBrown overflow-hidden">
+            <!-- Dynamic Background -->
+            <div id="visual-bg" class="absolute inset-0 bg-cover bg-center transition-all duration-700 ease-in-out">
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-earth-darkText/90 via-transparent to-transparent md:bg-gradient-to-r">
+            </div>
+
+            <!-- Floating Label -->
+            <div class="absolute bottom-10 left-10 md:bottom-20 md:left-20 z-10">
+                <span id="visual-tag"
+                    class="text-xs font-bold uppercase tracking-[0.3em] text-earth-terracotta mb-2 block">Origin:
+                    Ratnapura</span>
+                <h2 id="visual-title" class="text-5xl md:text-7xl font-serif text-white">Ceylon<br>Cinnamon</h2>
+            </div>
+        </div>
+
+        <!-- Right: Control Panel (Scrollable) -->
+        <div
+            class="w-full md:w-1/2 min-h-screen bg-earth-darkText flex flex-col justify-center px-6 md:px-24 py-20 relative z-10">
+
+            <!-- Breadcrumbs -->
+            <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-earth-sage mb-12 opacity-60">
+                <span>Spices</span>
+                <span>/</span>
+                <span>True Ceylon</span>
+                <span>/</span>
+                <span class="text-white opacity-100">Cinnamon</span>
+            </div>
+
+            <!-- Product Header -->
+            <h1 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">
+                Not All Bark<br>Is Created Equal.
+            </h1>
+            <p class="text-earth-cream/60 text-lg mb-12 max-w-md font-body italic">
+                From the Alba-grade shoots to the robust older harvest. Select your potency.
+            </p>
+
+            <!-- Variant Selector -->
+            <div class="mb-12 space-y-4">
+                <label class="text-xs font-bold uppercase tracking-widest text-earth-sage block mb-4">Select
+                    Grade</label>
+
+                <!-- Grade C5 Button -->
+                <button onclick="selectVariant('c5')" id="btn-c5"
+                    class="variant-btn w-full text-left p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-all group variant-active">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-2xl font-serif group-hover:text-earth-terracotta transition-colors">Grade
+                            C5</span>
+                        <span class="text-xl">₹550</span>
+                    </div>
+                    <p class="text-sm text-earth-cream/50 group-hover:text-earth-cream/80 transition-colors">The Gold
+                        Standard. Pencil-thin, delicate, sweet. Best for desserts.</p>
+                </button>
+
+                <!-- Grade H1 Button -->
+                <button onclick="selectVariant('h1')" id="btn-h1"
+                    class="variant-btn w-full text-left p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-all group opacity-60 hover:opacity-100">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-2xl font-serif group-hover:text-earth-terracotta transition-colors">Grade
+                            H1</span>
+                        <span class="text-xl">₹480</span>
+                    </div>
+                    <p class="text-sm text-earth-cream/50 group-hover:text-earth-cream/80 transition-colors">The
+                        Essential. Thicker bark, higher oil content. Spicy & Robust.</p>
+                </button>
+
+                <!-- Powder Button -->
+                <button onclick="selectVariant('powder')" id="btn-powder"
+                    class="variant-btn w-full text-left p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-all group opacity-60 hover:opacity-100">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-2xl font-serif group-hover:text-earth-terracotta transition-colors">Stone
+                            Ground</span>
+                        <span class="text-xl">₹299</span>
+                    </div>
+                    <p class="text-sm text-earth-cream/50 group-hover:text-earth-cream/80 transition-colors">Pure dust.
+                        No fillers. Made from broken C5/H1 quills.</p>
+                </button>
+            </div>
+
+            <!-- Dynamic Details Panel -->
+            <div id="details-panel" class="border-t border-white/10 pt-8 mb-12">
+                <div class="grid grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Aroma Profile</span>
+                        <span id="detail-aroma" class="font-serif text-lg">Delicate, Floral, Sweet</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Oil Content</span>
+                        <span id="detail-oil" class="font-serif text-lg">~1.2% (Standard)</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Format</span>
+                        <span id="detail-format" class="font-serif text-lg">Whole Quills (Packed 50g)</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Best For</span>
+                        <span id="detail-use" class="font-serif text-lg">Tea, Coffee, Desserts</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button onclick="addToCart()"
+                        class="flex-1 bg-earth-terracotta text-white h-14 rounded-full font-bold uppercase tracking-widest hover:bg-earth-clay transition-all shadow-lg shadow-earth-terracotta/20">
+                        Add to Cart
+                    </button>
+                    <!-- Quantity Stepper (Visual) -->
+                    <div class="flex items-center border border-white/20 rounded-full h-14 px-4 text-white">
+                        <button class="w-8 h-8 flex items-center justify-center hover:text-earth-terracotta">-</button>
+                        <span class="w-8 text-center font-serif text-lg">1</span>
+                        <button class="w-8 h-8 flex items-center justify-center hover:text-earth-terracotta">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promise -->
+            <div class="text-center md:text-left">
+                <p class="text-xs font-mono text-earth-cream/30 uppercase tracking-widest">
+                    * Guaranteed 0% Coumarin compared to Cassia
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Script to handle Variants -->
+    <script>
+        const products = {
+            'c5': {
+                image: 'url("img/cinnamon-grade-c5-front.jpg")',
+                title: 'Grade C5<br>Alba',
+                price: '₹550',
+                aroma: 'Delicate, Floral, Sweet',
+                oil: '~1.2% (Refined)',
+                format: 'Whole Quills (50g)',
+                use: 'Tea, Coffee, Desserts',
+                tag: 'The Executive Choice'
+            },
+            'h1': { // Changed from H2 to H1 as per products.json plan
+                image: 'url("img/ceylon-cinnamon-h2-grade.jpg")', // Using H2 image as placeholder/fallback
+                title: 'Grade H1<br>Hamburg',
+                price: '₹480',
+                aroma: 'Spicy, Warm, Woody',
+                oil: '~2.8% (Rich)',
+                format: 'Thick Quills (50g)',
+                use: 'Curries, Stews, Rice',
+                tag: 'The Chef\'s Choice'
+            },
+            'powder': {
+                image: 'url("img/ceylon-cinnamon-c5-grade.jpg")', // Using generic powder image
+                title: 'Stone<br>Ground',
+                price: '₹299',
+                aroma: 'Instant, Potent',
+                oil: 'Preserved',
+                format: 'Fine Powder (100g)',
+                use: 'Baking, Smoothies',
+                tag: 'The Baker\'s Choice'
+            }
+        };
+
+        let currentVariant = 'c5';
+
+        function selectVariant(id) {
+            currentVariant = id;
+            // Update UI State
+            document.querySelectorAll('.variant-btn').forEach(btn => {
+                btn.classList.remove('variant-active');
+                btn.classList.add('opacity-60');
+            });
+            const btn = document.getElementById('btn-' + id);
+            btn.classList.add('variant-active');
+            btn.classList.remove('opacity-60');
+
+            // Update Data
+            const data = products[id];
+
+            // GSAP Animations for transitions
+            gsap.to('#visual-bg', {
+                opacity: 0, duration: 0.2, onComplete: () => {
+                    document.getElementById('visual-bg').style.backgroundImage = data.image;
+                    gsap.to('#visual-bg', { opacity: 1, duration: 0.5 });
+                }
+            });
+
+            // Text Updates
+            document.getElementById('visual-title').innerHTML = data.title;
+            document.getElementById('visual-tag').innerText = data.tag;
+
+            document.getElementById('detail-aroma').innerText = data.aroma;
+            document.getElementById('detail-oil').innerText = data.oil;
+            document.getElementById('detail-format').innerText = data.format;
+            document.getElementById('detail-use').innerText = data.use;
+        }
+
+        function addToCart() {
+            const data = products[currentVariant];
+            // Format price: remove '₹' and parse
+            const price = parseInt(data.price.replace('₹', ''));
+            window.cart.addItem({
+                id: 'cinnamon-' + currentVariant,
+                title: data.title.replace('<br>', ' '),
+                variant: data.variantName || currentVariant.toUpperCase(),
+                price: price,
+                image: data.image.replace('url("', '').replace('")', '')
+            });
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            selectVariant('c5'); // Default
+            lucide.createIcons();
+        });
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

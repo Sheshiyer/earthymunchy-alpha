@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceylon Cloves | Earthy Munchy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                        body: ['"Crimson Text"', 'serif'],
+                    },
+                    colors: {
+                        earth: {
+                            cream: '#F5F1E8',
+                            sage: '#8B9A7E',
+                            darkSage: '#4A5D43',
+                            terracotta: '#D4876F',
+                            clay: '#C17855',
+                            warmBrown: '#8B6F47',
+                            text: '#594a42',
+                            darkText: '#2c2420'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#1a1512] text-earth-cream font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="index.html"
+                    class="text-2xl font-serif font-bold tracking-tight text-earth-darkText flex items-center gap-2">
+                    EARTHY MUNCHY.
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
+                    <a href="product-honey.html" class="hover:text-earth-terracotta transition-colors duration-200">The
+                        Honey Vault</a>
+                    <a href="product-cinnamon.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cinnamon</a>
+                    <a href="product-cloves.html"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Cloves</a>
+                    <a href="story.html" class="hover:text-earth-terracotta transition-colors duration-200">Our
+                        Story</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <button
+                    class="cart-trigger text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200 relative group">
+                    <i data-lucide="shopping-bag"
+                        class="w-5 h-5 group-hover:text-earth-terracotta transition-colors"></i>
+                    <span
+                        class="cart-badge opacity-0 scale-0 transition-all duration-300 absolute -top-1 -right-1 w-4 h-4 bg-earth-terracotta text-white text-[9px] flex items-center justify-center rounded-full ring-2 ring-earth-cream font-bold"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-h-screen flex flex-col md:flex-row relative">
+
+        <!-- Interactive Background Mesh (CSS Only for now) -->
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#D4876F_0%,_transparent_50%)] blur-[120px]">
+            </div>
+        </div>
+
+        <!-- Left Content -->
+        <div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center relative z-10">
+            <span class="text-earth-sage text-xs font-bold uppercase tracking-[0.3em] mb-4">Aromatic Intensity</span>
+            <h1 class="text-6xl md:text-8xl font-serif mb-8 text-white leading-none">
+                Hand-Picked<br>
+                <span class="italic text-earth-terracotta">Excellence.</span>
+            </h1>
+            <p class="text-lg text-white/60 max-w-md leading-relaxed mb-12">
+                Sourced from the mid-country wet zones of Sri Lanka.
+                Rich in Eugenol, these buds pack a numbing, sweet heat that defines true Ceylon quality.
+            </p>
+
+            <!-- Toggle Switch -->
+            <div class="inline-flex bg-white/5 p-1 rounded-full w-fit mb-12 backdrop-blur-sm border border-white/10">
+                <button onclick="setGrade('g1')" id="tab-g1"
+                    class="px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 bg-earth-terracotta text-white shadow-lg">
+                    Grade 1
+                </button>
+                <button onclick="setGrade('cg2')" id="tab-cg2"
+                    class="px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 text-white/50 hover:text-white">
+                    Grade CG2
+                </button>
+            </div>
+
+            <!-- Pricing & Action -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-baseline gap-4">
+                    <span id="price-display" class="text-5xl font-serif text-white">₹499</span>
+                    <span class="text-sm text-white/40 uppercase tracking-widest">per 50g</span>
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="addToCart()"
+                        class="bg-white text-earth-darkText px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-earth-cream transition-colors">
+                        Add to Cart
+                    </button>
+                </div>
+                <p id="grade-desc" class="text-sm text-white/40 max-w-sm mt-4 border-l-2 border-earth-terracotta pl-4">
+                    Top-tier hand-selected buds. Perfectly intact heads. Highest oil content.
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Visual (Image Interaction) -->
+        <div class="w-full md:w-1/2 h-[50vh] md:h-screen relative overflow-hidden">
+            <!-- Circular Mask Image -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-[80%] aspect-square rounded-full border border-white/10 p-4 relative animate-spin-slow">
+                    <!-- Dashed Border -->
+                    <div
+                        class="absolute inset-0 border-2 border-dashed border-white/20 rounded-full animate-[spin_60s_linear_infinite_reverse]">
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute inset-0 flex items-center justify-center">
+                <img src="img/cloves-grade-cg2-front.jpg"
+                    class="w-[70%] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
+                    id="product-img">
+            </div>
+
+            <!-- Floating Specs -->
+            <div class="absolute top-1/2 right-10 md:right-20 -translate-y-1/2 flex flex-col gap-8 text-right">
+                <div>
+                    <span class="block text-xs text-earth-sage uppercase tracking-widest">Eugenol</span>
+                    <span class="text-2xl font-serif text-white">High</span>
+                </div>
+                <div>
+                    <span class="block text-xs text-earth-sage uppercase tracking-widest">Moisture</span>
+                    <span class="text-2xl font-serif text-white">
+                        < 12%</span>
+                </div>
+                <div>
+                    <span class="block text-xs text-earth-sage uppercase tracking-widest">Harvest</span>
+                    <span class="text-2xl font-serif text-white">2025</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const cloveData = {
+            'g1': {
+                price: '₹499',
+                desc: 'Top-tier hand-selected buds. Perfectly intact heads. Highest oil content. Ideal for medicinal use and premium teas.',
+                img: 'img/spice-spoon-hero.png' // Would ideally be a specific G1 image
+            },
+            'cg2': {
+                price: '₹399',
+                desc: 'Standard grade with smaller buds and some stems. Excellent value for daily curries, spice blends, and garam masala.',
+                img: 'img/spice-spoon-hero.png' // Would ideally be a specific CG2 image
+            }
+        };
+
+        let currentGrade = 'g1';
+
+        function setGrade(grade) {
+            currentGrade = grade;
+            // Tab Styles
+            document.getElementById('tab-g1').className = grade === 'g1'
+                ? "px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 bg-earth-terracotta text-white shadow-lg"
+                : "px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 text-white/50 hover:text-white";
+
+            document.getElementById('tab-cg2').className = grade === 'cg2'
+                ? "px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 bg-earth-terracotta text-white shadow-lg"
+                : "px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 text-white/50 hover:text-white";
+
+            // Data Update
+            const data = cloveData[grade];
+
+            // Text Animate
+            const priceEl = document.getElementById('price-display');
+            const descEl = document.getElementById('grade-desc');
+
+            priceEl.style.opacity = 0;
+            descEl.style.opacity = 0;
+
+            setTimeout(() => {
+                priceEl.innerText = data.price;
+                descEl.innerText = data.desc;
+                priceEl.style.opacity = 1;
+                descEl.style.opacity = 1;
+            }, 200);
+        }
+
+        function addToCart() {
+            const data = cloveData[currentGrade];
+            const price = parseInt(data.price.replace('₹', ''));
+            window.cart.addItem({
+                id: 'cloves-' + currentGrade,
+                title: 'Ceylon Cloves',
+                variant: currentGrade === 'g1' ? 'Grade 1' : 'Grade CG2',
+                price: price,
+                image: data.img
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
