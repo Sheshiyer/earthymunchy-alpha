@@ -68,21 +68,31 @@
 
 <body class="bg-earth-cream text-earth-text font-sans antialiased">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 mix-blend-difference text-white transition-all duration-300 print:hidden">
+    <nav
+        class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-10">
-                <a href="index.html" class="text-2xl font-serif font-bold tracking-tight flex items-center gap-2">
-                    EARTHY MUNCHY.
+                <a href="index.html" class="flex items-center">
+                    <img src="img/logo-tm.png" alt="EARTHY MUNCHY" class="h-12 w-auto object-contain">
                 </a>
-                <div class="hidden md:flex items-center gap-8 text-sm font-normal opacity-80">
-                    <a href="shop-honey.html" class="underline underline-offset-4 decoration-1">The Honey Vault</a>
-                    <a href="shop-spices.html" class="hover:opacity-100 transition-opacity duration-200">Ceylon
-                        Spices</a>
-                    <a href="shop-sampler.html" class="hover:opacity-100 transition-opacity duration-200">Gifting</a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
+                    <a href="story.html" class="hover:text-earth-terracotta transition-colors duration-200">Our
+                        Story</a>
+                    <a href="index.html#products"
+                        class="hover:text-earth-terracotta transition-colors duration-200">Products</a>
                 </div>
             </div>
             <div class="flex items-center gap-6">
-                <a href="story.html" class="text-sm font-normal hover:opacity-100">Our Story</a>
+                <button class="text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <button
+                    class="cart-trigger text-earth-warmBrown hover:text-earth-terracotta transition-colors duration-200 relative group">
+                    <i data-lucide="shopping-bag"
+                        class="w-5 h-5 group-hover:text-earth-terracotta transition-colors"></i>
+                    <span
+                        class="cart-badge opacity-0 scale-0 transition-all duration-300 absolute -top-1 -right-1 w-4 h-4 bg-earth-terracotta text-white text-[9px] flex items-center justify-center rounded-full ring-2 ring-earth-cream font-bold"></span>
+                </button>
             </div>
         </div>
     </nav>
