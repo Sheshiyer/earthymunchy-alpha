@@ -14,6 +14,7 @@ export default defineConfig({
                 shopSpices: resolve(__dirname, 'shop-spices.html'),
                 shop: resolve(__dirname, 'shop.html'),
                 story: resolve(__dirname, 'story.html'),
+                tailwind: resolve(__dirname, 'public/tailwind-fonts.css'),
             },
         },
     },

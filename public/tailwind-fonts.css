@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Tex Gyre Termes';
+        src: url('fonts/TeX-Gyre-Termes/texgyretermes-regular.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Tex Gyre Termes';
+        src: url('fonts/TeX-Gyre-Termes/texgyretermes-bold.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Solway';
+        src: url('fonts/Solway/Solway-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Solway';
+        src: url('fonts/Solway/Solway-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+}

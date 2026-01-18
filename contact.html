@@ -10,31 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
         rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Lato"', 'sans-serif'],
-                        body: ['"Crimson Text"', 'serif'],
-                    },
-                    colors: {
-                        earth: {
-                            cream: '#F5F1E8',
-                            sage: '#8B9A7E',
-                            darkSage: '#4A5D43',
-                            terracotta: '#D4876F',
-                            clay: '#C17855',
-                            warmBrown: '#8B6F47',
-                            text: '#594a42',
-                            darkText: '#2c2420'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="tailwind-fonts.css">
     <style>
         body {
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -50,8 +26,9 @@
         class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-10">
-                <a href="index.html" class="flex items-center">
-                    <img src="img/logo-tm.png" alt="EARTHY MUNCHY" class="h-12 w-auto object-contain">
+                <a href="index.html"
+                    class="text-2xl font-bold tracking-tight text-earth-darkText flex items-center gap-2">
+                    <span class="font-earthy">EARTHY</span> <span class="font-munchy">MUNCHY</span>™
                 </a>
                 <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
                     <a href="story.html" class="hover:text-earth-terracotta transition-colors duration-200">Our
