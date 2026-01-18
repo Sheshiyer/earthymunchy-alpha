@@ -31,7 +31,7 @@
     </style>
 </head>
 
-<body class="bg-earth-darkText text-earth-cream font-sans antialiased overflow-x-hidden">
+<body class="bg-earth-darkText text-earth-cream font-body antialiased overflow-x-hidden">
 
     <!-- Navigation -->
     <nav
@@ -40,7 +40,7 @@
             <div class="flex items-center gap-10">
                 <a href="index.html"
                     class="text-2xl font-bold tracking-tight text-earth-darkText flex items-center gap-2">
-                    <span class="font-earthy">EARTHY</span> <span class="font-munchy">MUNCHY</span>™
+                    <span class="font-heading">EARTHY</span> <span class="font-subheading">MUNCHY</span>™
                 </a>
                 <div class="hidden md:flex items-center gap-8 text-sm font-normal text-earth-warmBrown">
                     <a href="story.html" class="hover:text-earth-terracotta transition-colors duration-200">Our
@@ -58,7 +58,7 @@
                     <i data-lucide="shopping-bag"
                         class="w-5 h-5 group-hover:text-earth-terracotta transition-colors"></i>
                     <span
-                        class="cart-badge opacity-0 scale-0 transition-all duration-300 absolute -top-1 -right-1 w-4 h-4 bg-earth-terracotta text-white text-[9px] flex items-center justify-center rounded-full ring-2 ring-earth-cream font-bold"></span>
+                        class="cart-badge opacity-0 scale-0 transition-all duration-300 absolute -top-1 -right-1 w-4 h-4 bg-earth-terracotta text-white text-xs flex items-center justify-center rounded-full ring-2 ring-earth-cream font-bold"></span>
                 </button>
             </div>
         </div>
@@ -81,7 +81,7 @@
                 <span id="visual-tag"
                     class="text-xs font-bold uppercase tracking-[0.3em] text-earth-terracotta mb-2 block">Origin:
                     Ratnapura</span>
-                <h2 id="visual-title" class="text-5xl md:text-7xl font-serif text-white">Ceylon<br>Cinnamon</h2>
+                <h2 id="visual-title" class="text-5xl md:text-7xl font-heading text-white">Ceylon<br>Cinnamon</h2>
             </div>
         </div>
 
@@ -99,7 +99,7 @@
             </div>
 
             <!-- Product Header -->
-            <h1 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">
+            <h1 class="text-4xl md:text-5xl font-heading mb-6 leading-tight">
                 Not All Bark<br>Is Created Equal.
             </h1>
             <p class="text-earth-cream/60 text-lg mb-12 max-w-md font-body italic">
@@ -115,7 +115,7 @@
                 <button onclick="selectVariant('c5')" id="btn-c5"
                     class="variant-btn w-full text-left p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-all group variant-active">
                     <div class="flex justify-between items-center mb-2">
-                        <span class="text-2xl font-serif group-hover:text-earth-terracotta transition-colors">Grade
+                        <span class="text-2xl font-heading group-hover:text-earth-terracotta transition-colors">Grade
                             C5</span>
                         <span class="text-xl">₹550</span>
                     </div>
@@ -127,7 +127,7 @@
                 <button onclick="selectVariant('h1')" id="btn-h1"
                     class="variant-btn w-full text-left p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-all group opacity-60 hover:opacity-100">
                     <div class="flex justify-between items-center mb-2">
-                        <span class="text-2xl font-serif group-hover:text-earth-terracotta transition-colors">Grade
+                        <span class="text-2xl font-heading group-hover:text-earth-terracotta transition-colors">Grade
                             H1</span>
                         <span class="text-xl">₹480</span>
                     </div>
@@ -139,7 +139,7 @@
                 <button onclick="selectVariant('powder')" id="btn-powder"
                     class="variant-btn w-full text-left p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-all group opacity-60 hover:opacity-100">
                     <div class="flex justify-between items-center mb-2">
-                        <span class="text-2xl font-serif group-hover:text-earth-terracotta transition-colors">Stone
+                        <span class="text-2xl font-heading group-hover:text-earth-terracotta transition-colors">Stone
                             Ground</span>
                         <span class="text-xl">₹299</span>
                     </div>
@@ -153,19 +153,19 @@
                 <div class="grid grid-cols-2 gap-8 mb-8">
                     <div>
                         <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Aroma Profile</span>
-                        <span id="detail-aroma" class="font-serif text-lg">Delicate, Floral, Sweet</span>
+                        <span id="detail-aroma" class="font-heading text-lg">Delicate, Floral, Sweet</span>
                     </div>
                     <div>
                         <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Oil Content</span>
-                        <span id="detail-oil" class="font-serif text-lg">~1.2% (Standard)</span>
+                        <span id="detail-oil" class="font-heading text-lg">~1.2% (Standard)</span>
                     </div>
                     <div>
                         <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Format</span>
-                        <span id="detail-format" class="font-serif text-lg">Whole Quills (Packed 50g)</span>
+                        <span id="detail-format" class="font-heading text-lg">Whole Quills (Packed 50g)</span>
                     </div>
                     <div>
                         <span class="block text-xs uppercase tracking-widest text-earth-sage mb-1">Best For</span>
-                        <span id="detail-use" class="font-serif text-lg">Tea, Coffee, Desserts</span>
+                        <span id="detail-use" class="font-heading text-lg">Tea, Coffee, Desserts</span>
                     </div>
                 </div>
 
@@ -177,7 +177,7 @@
                     <!-- Quantity Stepper (Visual) -->
                     <div class="flex items-center border border-white/20 rounded-full h-14 px-4 text-white">
                         <button class="w-8 h-8 flex items-center justify-center hover:text-earth-terracotta">-</button>
-                        <span class="w-8 text-center font-serif text-lg">1</span>
+                        <span class="w-8 text-center font-heading text-lg">1</span>
                         <button class="w-8 h-8 flex items-center justify-center hover:text-earth-terracotta">+</button>
                     </div>
                 </div>
