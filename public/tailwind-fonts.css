@@ -2,32 +2,199 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===========================================
+   FONT FACE DECLARATIONS
+   Optimized loading with font-display: swap
+   =========================================== */
+
 @layer base {
+    /* Tex Gyre Termes - Primary Heading Font */
     @font-face {
         font-family: 'Tex Gyre Termes';
         src: url('fonts/TeX-Gyre-Termes/texgyretermes-regular.otf') format('opentype');
-        font-weight: normal;
+        font-weight: 400;
         font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Tex Gyre Termes';
+        src: url('fonts/TeX-Gyre-Termes/texgyretermes-italic.otf') format('opentype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
     }
 
     @font-face {
         font-family: 'Tex Gyre Termes';
         src: url('fonts/TeX-Gyre-Termes/texgyretermes-bold.otf') format('opentype');
-        font-weight: bold;
+        font-weight: 700;
         font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Tex Gyre Termes';
+        src: url('fonts/TeX-Gyre-Termes/texgyretermes-bolditalic.otf') format('opentype');
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    /* Solway - Secondary Subheading Font */
+    @font-face {
+        font-family: 'Solway';
+        src: url('fonts/Solway/Solway-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
         font-family: 'Solway';
         src: url('fonts/Solway/Solway-Regular.ttf') format('truetype');
-        font-weight: normal;
+        font-weight: 400;
         font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Solway';
+        src: url('fonts/Solway/Solway-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
         font-family: 'Solway';
         src: url('fonts/Solway/Solway-Bold.ttf') format('truetype');
-        font-weight: bold;
+        font-weight: 700;
         font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Solway';
+        src: url('fonts/Solway/Solway-ExtraBold.ttf') format('truetype');
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+/* ===========================================
+   IMPORT TYPOGRAPHY SYSTEM
+   =========================================== */
+@import 'typography.css';
+
+/* ===========================================
+   CUSTOM UTILITY CLASSES
+   =========================================== */
+
+@layer utilities {
+    /* Text gradient utility */
+    .text-gradient-brand {
+        background: linear-gradient(
+            90deg,
+            #D4876F 0%,
+            #C17855 50%,
+            #8B6F47 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    /* Animated gradient text */
+    .text-gradient-animate {
+        background: linear-gradient(
+            90deg,
+            #D4876F 0%,
+            #C17855 25%,
+            #8B6F47 50%,
+            #C17855 75%,
+            #D4876F 100%
+        );
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: gradient-shift 8s linear infinite;
+    }
+
+    /* Text outline effect */
+    .text-outline {
+        -webkit-text-stroke: 1px currentColor;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .text-outline-thin {
+        -webkit-text-stroke: 0.5px currentColor;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Underline draw on hover */
+    .hover-underline-draw {
+        position: relative;
+    }
+
+    .hover-underline-draw::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hover-underline-draw:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    /* Smooth text shadow */
+    .text-shadow-soft {
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Split parent for animations */
+    .split-parent {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    /* Font feature settings */
+    .font-features-all {
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11", "kern" 1, "liga" 1;
+    }
+
+    /* Tabular numbers for prices */
+    .tabular-nums {
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+/* ===========================================
+   REDUCED MOTION PREFERENCES
+   =========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .text-gradient-animate {
+        animation: none;
+    }
+
+    .hover-underline-draw::after {
+        transition-duration: 0.01ms !important;
+    }
+
+    [data-animate] {
+        animation: none !important;
+        transition: none !important;
     }
 }

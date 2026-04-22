@@ -1,0 +1,283 @@
+/* Typography Design Tokens */
+:root {
+    /* Font Families */
+    --font-heading: 'Tex Gyre Termes', serif;
+    --font-subheading: 'Solway', sans-serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Display Scale */
+    --text-display-hero: clamp(3.5rem, 8vw + 1rem, 9rem);
+    --text-display-large: clamp(3rem, 6vw + 1rem, 7.5rem);
+    --text-display-medium: clamp(2.5rem, 5vw + 0.5rem, 5rem);
+
+    /* Heading Scale */
+    --text-heading-1: clamp(2rem, 4vw + 0.5rem, 4rem);
+    --text-heading-2: clamp(1.75rem, 3vw + 0.5rem, 3rem);
+    --text-heading-3: clamp(1.5rem, 2vw + 0.5rem, 2.25rem);
+    --text-heading-4: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+
+    /* Body Scale */
+    --text-body-large: clamp(1.125rem, 1vw + 0.5rem, 1.375rem);
+    --text-body-base: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+    --text-body-small: clamp(0.875rem, 0.25vw + 0.75rem, 1rem);
+
+    /* Utility Scale */
+    --text-caption: clamp(0.75rem, 0.25vw + 0.625rem, 0.875rem);
+    --text-overline: clamp(0.625rem, 0.2vw + 0.5rem, 0.75rem);
+
+    /* Line Heights */
+    --leading-none: 1;
+    --leading-tight: 1.1;
+    --leading-snug: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 1.75;
+
+    /* Letter Spacing */
+    --tracking-tighter: -0.03em;
+    --tracking-tight: -0.015em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+    --tracking-mega: 0.2em;
+
+    /* Brand Colors (referenced in classes) */
+    --earth-cream: #F5F1E8;
+    --earth-warmBrown: #8C6A5D;
+    --earth-terracotta: #C65D47;
+    --earth-sage: #94A89A;
+    --earth-clay: #B68D78;
+    --earth-darkText: #2C2420;
+}
+
+/* Typography Utility Classes */
+.text-display-hero {
+    font-size: var(--text-display-hero);
+}
+
+.text-display-lg {
+    font-size: var(--text-display-large);
+}
+
+.text-display-md {
+    font-size: var(--text-display-medium);
+}
+
+.text-heading-1 {
+    font-size: var(--text-heading-1);
+}
+
+.text-heading-2 {
+    font-size: var(--text-heading-2);
+}
+
+.text-heading-3 {
+    font-size: var(--text-heading-3);
+}
+
+.text-heading-4 {
+    font-size: var(--text-heading-4);
+}
+
+.text-body-lg {
+    font-size: var(--text-body-large);
+}
+
+.text-body-base {
+    font-size: var(--text-body-base);
+}
+
+.text-body-sm {
+    font-size: var(--text-body-small);
+}
+
+.text-overline {
+    font-size: var(--text-overline);
+    letter-spacing: var(--tracking-mega);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.tracking-tight {
+    letter-spacing: var(--tracking-tight);
+}
+
+.tracking-widest {
+    letter-spacing: var(--tracking-widest);
+}
+
+.tracking-mega {
+    letter-spacing: var(--tracking-mega);
+}
+
+.leading-tight {
+    line-height: var(--leading-tight);
+}
+
+.leading-snug {
+    line-height: var(--leading-snug);
+}
+
+.leading-relaxed {
+    line-height: var(--leading-relaxed);
+}
+
+/* Gradient Text Animation */
+.text-gradient-animate {
+    background: linear-gradient(90deg,
+            var(--earth-terracotta) 0%,
+            var(--earth-clay) 25%,
+            var(--earth-warmBrown) 50%,
+            var(--earth-clay) 75%,
+            var(--earth-terracotta) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 8s linear infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* Utility Enhancements */
+.font-display {
+    font-family: var(--font-heading);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-subheading {
+    font-family: var(--font-subheading);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+/* Keep consistent with existing naming if any */
+/* Wait, in index.html, --font-heading is Tex Gyre Termes, and --font-subheading is Solway. 
+   Usually 'heading' classes map to the primary header font. 
+   Let's check index.html usage. */
+/* Gradient Text Animation */
+.text-gradient-animate {
+    background: linear-gradient(
+        90deg,
+        #D4876F 0%,
+        #C17855 25%,
+        #8B6F47 50%,
+        #C17855 75%,
+        #D4876F 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Text Outline Effect */
+.text-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+    color: transparent;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .text-gradient-animate {
+        animation: none;
+    }
+}
+
+/* Global Noise Overlay */
+.noise-overlay {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    animation: noise 0.5s steps(3) infinite;
+}
+
+@keyframes noise {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 15%); }
+    50% { transform: translate(-10%, 5%); }
+    60% { transform: translate(15%, 0); }
+    70% { transform: translate(0, 10%); }
+    80% { transform: translate(-15%, 0); }
+    90% { transform: translate(10%, 5%); }
+}
+
+/* Fluid Background (Orbs) */
+.fluid-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    background: #F5F1E8;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    will-change: transform;
+}
+
+.orb-1 {
+    width: 60vw;
+    height: 60vw;
+    background: #D4876F;
+    top: -10%;
+    left: -10%;
+}
+
+.orb-2 {
+    width: 50vw;
+    height: 50vw;
+    background: #8B9A7E;
+    bottom: -10%;
+    right: -10%;
+}
+
+.orb-3 {
+    width: 40vw;
+    height: 40vw;
+    background: #C17855;
+    top: 40%;
+    left: 40%;
+}

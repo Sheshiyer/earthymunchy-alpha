@@ -5,15 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceylon Spices | Earthy Munchy</title>
+    <script src="tailwind-browser-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="tailwind-fonts.css">
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Text Animations Library -->
+    <script src="text-animations.js" defer></script>
     <style>
         body {
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Background Fallbacks */
+        .bg-cream-glass {
+            background-color: rgba(245, 241, 232, 0.95);
+        }
+
+        .bg-dark-glass {
+            background-color: rgba(44, 36, 32, 0.95);
+        }
+
+        .bg-brown-glass {
+            background-color: rgba(139, 111, 71, 0.95);
+        }
+
+        .bg-clay-glass {
+            background-color: rgba(193, 120, 85, 0.95);
         }
 
         .text-outline-cream {
@@ -23,7 +47,19 @@
     </style>
 </head>
 
-<body class="bg-earth-darkText text-earth-cream font-body antialiased">
+<body class="bg-earth-darkText text-earth-cream font-body antialiased relative">
+    <!-- Noise Container -->
+    <div class="noise-overlay"></div>
+
+    <!-- Fluid Background -->
+    <div class="fluid-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Background Animation Script -->
+    <script src="background-animation.js" defer></script>
     <!-- Navigation -->
     <nav
         class="fixed top-0 w-full z-50 border-b border-earth-warmBrown/10 bg-earth-cream/90 backdrop-blur-md transition-all duration-300">
@@ -70,7 +106,7 @@
     <!-- Section 1: The Cinnamon Grades (Split Compare) -->
     <section class="min-h-screen grid grid-cols-1 md:grid-cols-2 relative">
         <!-- C5 Grade -->
-        <div class="relative group h-[80vh] md:h-auto overflow-hidden bg-earth-warmBrown border-r border-white/10">
+        <div class="relative group h-[80vh] md:h-auto overflow-hidden bg-brown-glass border-r border-white/10">
             <div
                 class="absolute inset-0 bg-[url('img/cinnamon-grade-c5-front.jpg')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-1000">
             </div>
@@ -94,7 +130,7 @@
         </div>
 
         <!-- H2 Grade -->
-        <div class="relative group h-[80vh] md:h-auto overflow-hidden bg-earth-clay">
+        <div class="relative group h-[80vh] md:h-auto overflow-hidden bg-clay-glass">
             <div
                 class="absolute inset-0 bg-[url('img/ceylon-cinnammon-h2-grade.jpg')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-1000">
             </div>
@@ -125,7 +161,7 @@
     </section>
 
     <!-- Section 2: Powder Up -->
-    <section class="py-24 bg-earth-cream text-earth-darkText">
+    <section class="py-24 bg-cream-glass text-earth-darkText backdrop-blur-sm">
         <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
                 <img src="img/ceylon-cinnamon-c5-grade.jpg"
@@ -149,12 +185,12 @@
     </section>
 
     <!-- Section 3: The Potency Scale (Cloves) -->
-    <section class="py-32 bg-earth-darkText relative overflow-hidden">
+    <section class="py-32 bg-dark-glass relative overflow-hidden backdrop-blur-sm">
         <div
-            class="absolute top-0 right-0 w-1/2 h-full bg-[url('img/bg-cinnamon-texture.png')] bg-cover bg-left opacity-10 md:opacity-40 mask-image-gradient">
+            class="absolute top-0 right-0 w-full md:w-1/2 h-full bg-[url('img/bg-cinnamon-texture.png')] bg-cover bg-left opacity-20">
         </div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2">
-            <div class="bg-black/20 backdrop-blur-sm p-12 rounded-3xl border border-white/5">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="bg-black/40 backdrop-blur-md p-12 rounded-3xl border border-white/10 shadow-2xl">
                 <span class="text-earth-sage font-bold uppercase tracking-widest text-xs mb-4 block">Hand-Picked
                     Buds</span>
                 <h2 class="text-6xl font-heading text-white mb-8">True Ceylon Cloves.</h2>
@@ -162,7 +198,8 @@
                 <div class="space-y-12">
                     <div class="group cursor-pointer">
                         <div class="flex justify-between items-end mb-2 border-b border-earth-sage/30 pb-2">
-                            <h3 class="text-3xl font-heading group-hover:text-earth-terracotta transition-colors">Grade 1
+                            <h3 class="text-3xl font-heading group-hover:text-earth-terracotta transition-colors">Grade
+                                1
                                 Hand-Select</h3>
                             <span class="text-xl">₹499</span>
                         </div>

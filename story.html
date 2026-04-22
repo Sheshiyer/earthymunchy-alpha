@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Sourcing Story | Earthy Munchy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-browser-config.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
         rel="stylesheet">
@@ -12,6 +14,8 @@
     <!-- GSAP for Advanced Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Text Animations Library -->
+    <script src="text-animations.js" defer></script>
 
     <style>
         body {
@@ -42,6 +46,18 @@
 </head>
 
 <body class="bg-earth-cream text-earth-text font-body antialiased relative">
+    <!-- Noise Container -->
+    <div class="noise-overlay"></div>
+
+    <!-- Fluid Background -->
+    <div class="fluid-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Background Animation Script -->
+    <script src="background-animation.js" defer></script>
 
     <!-- Navigation -->
     <nav
@@ -82,11 +98,12 @@
         <div class="absolute inset-0 bg-gradient-to-b from-earth-cream via-earth-cream/60 to-earth-cream"></div>
 
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <span class="text-earth-terracotta font-subheading italic text-xl mb-4 block animate-fade-in-up">The
+            <span class="text-earth-terracotta font-subheading italic text-xl mb-4 block" data-animate="fade-up">The
                 Origin</span>
-            <h1
-                class="text-6xl lg:text-8xl font-heading font-light text-earth-darkText tracking-tight mb-8 leading-[1.1]">
-                Roots. Soil. <br> <span class="italic text-earth-sage">And a Promise.</span>
+            <h1 class="text-6xl lg:text-8xl font-heading font-light text-earth-darkText tracking-tight mb-8 leading-[1.1]"
+                data-animate="line-reveal">
+                Roots. Soil. <br> <span class="italic text-earth-sage" data-animate="fade-up" data-delay="0.3">And a
+                    Promise.</span>
             </h1>
             <p class="text-xl text-earth-darkText/80 font-body leading-relaxed max-w-2xl mx-auto">
                 "We don't just source ingredients. We preserve a way of life."
@@ -101,7 +118,8 @@
             <div class="md:col-span-6 order-2 md:order-1 relative z-10">
                 <span class="text-earth-warmBrown font-bold uppercase tracking-widest text-xs mb-4 block">The Founder's
                     Journey</span>
-                <h2 class="text-4xl lg:text-5xl font-heading text-earth-darkText mb-8">One backpack. <br>Fifty farms.</h2>
+                <h2 class="text-4xl lg:text-5xl font-heading text-earth-darkText mb-8">One backpack. <br>Fifty farms.
+                </h2>
                 <div class="prose prose-lg text-earth-text/80 font-body leading-relaxed">
                     <p class="mb-6">
                         It started with a simple question: <em>Where does my food actually come from?</em>
@@ -242,7 +260,8 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-heading text-earth-darkText">"Finally, a spice brand<br>that respects
+                <h2 class="text-4xl lg:text-5xl font-heading text-earth-darkText">"Finally, a spice brand<br>that
+                    respects
                     the source."</h2>
             </div>
 

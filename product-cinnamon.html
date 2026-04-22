@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceylon Cinnamon Studio | Earthy Munchy</title>
+    <script src="tailwind-browser-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="tailwind-fonts.css">
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Text Animations Library -->
+    <script src="text-animations.js" defer></script>
     <style>
         body {
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -31,7 +38,19 @@
     </style>
 </head>
 
-<body class="bg-earth-darkText text-earth-cream font-body antialiased overflow-x-hidden">
+<body class="bg-earth-darkText text-earth-cream font-body antialiased overflow-x-hidden relative">
+    <!-- Noise Container -->
+    <div class="noise-overlay"></div>
+
+    <!-- Fluid Background -->
+    <div class="fluid-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Background Animation Script -->
+    <script src="background-animation.js" defer></script>
 
     <!-- Navigation -->
     <nav
